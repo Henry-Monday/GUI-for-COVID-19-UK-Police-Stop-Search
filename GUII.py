@@ -146,7 +146,7 @@ def stop_and_search(value, year, month):
     print("value - " + value, "year -" + year, "month -" + month)
     df = pd.read_json("https://data.police.uk/api/stops-force?force="+value+"&date="+year+"-"+month)
     df.sort_values(by = "datetime", ascending = True, inplace = True)
-    print(df["age_range"])
+    
     
     Total_Stop_and_Search = str(len(df["involved_person"]))+ " persons were stopped and searched by the "+this_value+" Police in the period "+m_value+"-"+y_value
     
